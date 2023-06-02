@@ -14,13 +14,12 @@ import Overview from "pages/overview";
 import Daily from "pages/daily";
 import Monthly from "pages/monthly";
 import Breakdown from "pages/breakdown";
-
-
-
+import Admin from "pages/admin";
+import Performance from "pages/performance";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
-  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
+  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   return (
     <div className="app">
       <BrowserRouter>
@@ -38,12 +37,13 @@ function App() {
               <Route path="/daily" element={<Daily />} />
               <Route path="/monthly" element={<Monthly />} />
               <Route path="/breakdown" element={<Breakdown />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/performance" element={<Performance />} />
             </Route>
           </Routes>
         </ThemeProvider>
       </BrowserRouter>
     </div>
-
   );
 }
 

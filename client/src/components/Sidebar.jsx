@@ -127,7 +127,8 @@ const Sidebar = ({
               borderWidth: isNonMobile ? 0 : "2px",
               width: drawerWidth,
             },
-          }}>
+          }}
+        >
           <Box width="100%">
             <Box m="1.5rem 2rem 2rem 3rem">
               <FlexBetween color={theme.palette.secondary.main}>
@@ -151,7 +152,8 @@ const Sidebar = ({
                       key={text}
                       sx={{
                         m: "2.5rem 0 1rem 3rem",
-                      }}>
+                      }}
+                    >
                       {text}
                     </Typography>
                   );
@@ -174,7 +176,8 @@ const Sidebar = ({
                           active === lcText
                             ? theme.palette.primary[600]
                             : theme.palette.secondary[100],
-                      }}>
+                      }}
+                    >
                       <ListItemIcon
                         sx={{
                           ml: "2rem",
@@ -182,7 +185,8 @@ const Sidebar = ({
                             active === lcText
                               ? theme.palette.primary[600]
                               : theme.palette.secondary[200],
-                        }}>
+                        }}
+                      >
                         {icon}
                       </ListItemIcon>
                       <ListItemText primary={text} />
@@ -211,12 +215,14 @@ const Sidebar = ({
                 <Typography
                   fontWeight="bold"
                   fontSize="0.9rem"
-                  sx={{ color: theme.palette.secondary[100] }}>
+                  sx={{ color: theme.palette.secondary[100] }}
+                >
                   {user.name}
                 </Typography>
                 <Typography
                   fontSize="0.8rem"
-                  sx={{ color: theme.palette.secondary[100] }}>
+                  sx={{ color: theme.palette.secondary[100] }}
+                >
                   {user.occupation}
                 </Typography>
               </Box>
